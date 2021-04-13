@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use PDF;
 
 class ArticleController extends Controller
 {
@@ -58,6 +59,11 @@ class ArticleController extends Controller
         //
     }
 
+    public function cetak_pdf(){
+        $articles = Article::all();
+        $pdf = PDF::loadview('layouts.articles_pdf', ['articles'=>$articles]);
+        return $pdf->stream();
+    }
     /**
      * Show the form for editing the specified resource.
      *
