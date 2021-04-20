@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Mahasiswa;
+use App\Models\Kelas;
 use Illuminate\Http\Request;
 use PDF;
 
