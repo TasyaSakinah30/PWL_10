@@ -41,4 +41,5 @@
 @endforeach
 
 </table>
+    <a href="{{ route('mahasiswa.cetak_pdf', $mahasiswa->nim) }}" class="btn btn-danger mt-3">Cetak</a>
 @endsection
